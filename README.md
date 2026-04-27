@@ -34,10 +34,8 @@ The project evolved in stages — starting from a basic version and then improvi
 
 ## 👥 Team Contribution
 
-* **Ramcharan** — Developed the initial version of the project (basic structure and setup)
-* **Sheshumadhava Pittala** — Enhanced the system by adding search modes, TF-IDF ranking, autocomplete, UI improvements, and debugging
-* **Sahith** — Further improvements and additional features (to be added)
-* **Nikhil** -
+* **Sahith** — Developed the initial version of the project (basic structure and setup)
+* **Ramcharan** — Enhanced the system by adding search modes, TF-IDF ranking, autocomplete, UI improvements, and debugging
 ---
 
 ## Tech used:
