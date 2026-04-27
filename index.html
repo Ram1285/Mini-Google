@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniGoogle — Smart File Search Engine</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/results.css" />
+</head>
+<body>
+  <div class="shell">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo"><span>Mini</span><em>Google</em></div>
+      <p class="tagline">Inverted Index · TF-IDF · Trie Autocomplete · Phrase &amp; Fuzzy Search</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-wrap" id="searchWrap">
+      <input
+        class="search-input"
+        id="searchInput"
+        placeholder='Search documents... (try "machine learning" or "neural")'
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button class="search-btn" onclick="doSearch()">SEARCH</button>
+      <div class="autocomplete" id="acDropdown"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+  <span class="chip-label">Mode:</span>
+
+  <div class="chip active" id="mode-keyword" onclick="setMode('keyword')" title="Search using exact keywords (order doesn't matter)">
+    keyword
+  </div>
+
+  <div class="chip" id="mode-phrase" onclick="setMode('phrase')" title="Search exact sentence or phrase (order matters)">
+    "phrase"
+  </div>
+  <div class="chip" id="mode-fuzzy" onclick="setMode('fuzzy')" title="Search similar words even with spelling mistakes">
+    fuzzy
+  </div>
+  <span style="flex:1"></span>
+  <div class="chip" id="stop-toggle" onclick="toggleStopwords()">
+    stopwords: OFF
+  </div>
+</div>
+
+    <!-- Indexed Docs Panel -->
+    <details class="docs-panel">
+      <summary>Indexed Documents</summary>
+      <div class="docs-grid" id="docsGrid"></div>
+    </details>
+
+    <!-- Results -->
+    <div id="resultsArea">
+      <div id="resultsMeta"></div>
+      <div id="resultsList"></div>
+    </div>
+
+  </div>
+
+  <!-- Data & Engine -->
+  <script src="data/documents.js"></script>
+  <script src="js/stopwords.js"></script>
+  <script src="js/trie.js"></script>
+  <script src="js/preprocessor.js"></script>
+  <script src="js/indexer.js"></script>
+  <script src="js/tfidf.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/highlight.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

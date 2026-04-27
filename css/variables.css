@@ -1,0 +1,33 @@
+/* ─── Design Tokens ─────────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:  #0d0d0f;
+  --bg2: #151518;
+  --bg3: #1c1c21;
+
+  /* Borders */
+  --border:  rgba(255, 255, 255, 0.08);
+  --border2: rgba(255, 255, 255, 0.14);
+
+  /* Text */
+  --text:  #e8e8f0;
+  --muted: #8888a0;
+
+  /* Accent palette */
+  --accent:         #7c6ef0;
+  --accent2:        #56cfb0;
+  --accent3:        #e86f6f;
+  --highlight:      rgba(124, 110, 240, 0.25);
+  --highlight-text: #c4b9ff;
+
+  /* Tag colours */
+  --tag-bg:    rgba(86, 207, 176, 0.12);
+  --tag-color: #56cfb0;
+
+  /* Typography */
+  --font:  'Courier New', monospace;
+  --font2: Georgia, serif;
+
+  /* Misc */
+  --radius: 8px;
+}

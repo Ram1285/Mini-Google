@@ -1,0 +1,101 @@
+/* ─── Search Bar ─────────────────────────────────────────────────────────── */
+.search-wrap { position: relative; margin-bottom: 1rem; }
+
+.search-input {
+  width: 100%;
+  padding: 14px 56px 14px 18px;
+  background: var(--bg3);
+  border: 1.5px solid var(--border2);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus       { border-color: var(--accent); }
+.search-input::placeholder { color: var(--muted); }
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 7px 13px;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s;
+}
+.search-btn:hover { opacity: 0.85; }
+
+/* ─── Autocomplete Dropdown ──────────────────────────────────────────────── */
+.autocomplete {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  z-index: 100;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: none;
+}
+.autocomplete.show { display: block; }
+
+.ac-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s;
+}
+.ac-item:hover,
+.ac-item.active { background: rgba(124, 110, 240, 0.12); color: var(--text); }
+
+.ac-prefix { color: var(--accent2); }
+.ac-suffix  { color: var(--muted); }
+
+/* ─── Mode / Filter Chips ────────────────────────────────────────────────── */
+.chip {
+  padding: 5px 13px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  background: var(--bg3);
+  color: var(--muted);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.chip:hover,
+.chip.active {
+  background: var(--highlight);
+  color: var(--highlight-text);
+  border-color: var(--accent);
+}
+
+.autocomplete {
+  position: absolute;
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-top: 5px;
+  z-index: 1000;
+}
+
+.ac-item {
+  padding: 10px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.ac-item:hover {
+  background: #8b5cf6;
+  color: #fff;
+}
